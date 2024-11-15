@@ -3,7 +3,7 @@
 **Contributors:** kartikmehta
 **Tags:** options, database, visualizer, admin  
 **Requires at least:** 6.0  
-**Tested up to:** 6.3  
+**Tested up to:** 6.7  
 **Requires PHP:** 8.1.29  
 **Stable tag:** 1.0.0  
 **License:** GPL v2 or later  
@@ -64,15 +64,15 @@ This plugin adheres to WordPress security best practices, including sanitization
 
 1. **Options List View**  
    View options with pagination and search functionality.
-   ![View](./assets/visualize.png)
+   ![View](./assets/syo-visualize.png)
 
 2. **Add New Option Form**  
    Add new options by specifying name, value, and autoload status.
-   ![Add](./assets/add_options.png)
+   ![Add](./assets/syo-add_options.png)
 
 3. **Edit Option Form**  
    Modify the value or autoload status of existing options.
-   ![Edit](./assets/edit.png)
+   ![Edit](./assets/syo-edit.png)
 
 4. **Delete Option Confirmation**  
    Safely delete options you no longer need.

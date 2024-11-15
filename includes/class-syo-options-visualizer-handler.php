@@ -57,7 +57,8 @@ class SYO_Options_Visualizer_Handler {
 	 */
 	private static function delete_option() {
 		// Delete the option.
-		$option_name = sanitize_text_field( isset( $_GET['delete_option'] ) ? $_GET['delete_option'] : '' ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$option_name = sanitize_text_field( isset( $_GET['delete_option'] ) ? wp_unslash( $_GET['delete_option'] ) : '' );
+ // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		// Check if the option exists.
 		if ( ! get_option( $option_name ) ) {
@@ -118,7 +119,8 @@ class SYO_Options_Visualizer_Handler {
 		$options_per_page = 10;
 		$current_page     = isset( $_GET['paged'] ) ? intval( $_GET['paged'] ) : 1; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$offset           = ( $current_page - 1 ) * $options_per_page;
-		$search_query     = isset( $_GET['s'] ) ? sanitize_text_field( $_GET['s'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$search_query = isset( $_GET['s'] ) ? sanitize_text_field( wp_unslash( $_GET['s'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
 
 		// Prepare the search query.
         // phpcs:disable
